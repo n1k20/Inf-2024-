@@ -1,5 +1,6 @@
 from collections import Counter # импорт функции для моды
-with open('17_3738.txt') as file:
+
+with open('...') as file:
     s = [int(k) for k in file]
 middle = [sum(map(int, str(x))) for a, x, b in zip(s, s[1:], s[2:])
           if sum(map(int, str(a))) == sum(map(int, str(b)))]
@@ -9,7 +10,7 @@ print(len(middle), finish.most_common()[0][0]) # находит моду в сп
 
 # другие задачи
 # 1
-f = list(map(int, open('2.txt').read().split()))
+f = list(map(int, open('...').read().split()))
 l = 0
 g = []
 for k in range(0, len(f)):
@@ -19,7 +20,7 @@ for k in range(0, len(f)):
         l += 1
 print(l, max(g))
 # 2
-s = list(map(int, open('17-4.txt').read().split()))
+s = list(map(int, open('...').read().split()))
 f = []
 for i in range(0, len(s)):
     if s[i] % 31 == 0 or s[i] % 47 == 0 or s[i] % 53 == 0:
