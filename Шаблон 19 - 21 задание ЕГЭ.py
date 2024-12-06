@@ -1,12 +1,16 @@
+""" 19 - 21"""
+"""
+Мега имбейшая функция для решения 19 - 21 прогой через рекурсию 
+"""
 def function1(s1, s2, move): # если на две кучи с действием
     if s1 + s2 >= 41: # суммируем по условию
         return move % 2 == 0 # если подходит
     if move == 0: #если ходы кончились
         return 0
     # по условию задачи
-    games = [function1(s1 + 1, s2, move - 1 ), \
-             function1(s1,  s2 + 1, move - 1), \
-             function1(s1 * 2, s2, move - 1), \
+    games = [function1(s1 + 1, s2, move - 1 ),
+             function1(s1,  s2 + 1, move - 1),
+             function1(s1 * 2, s2, move - 1),
              function1(s1, s2 * 2, move - 1)]
 
     return any(games) if (move - 1) % 2 == 0 else all(games) # проверяем на ответы
@@ -38,9 +42,9 @@ def function3(s1, s2, move): # если на две кучи с действие
     if move == 0: #если ходы кончились
         return 0
     # по условию задачи
-    games = [function3(s1 + 1, s2, move - 1 ), \
-             function3(s1,  s2 + 1, move - 1), \
-             function3(s1 * 2, s2, move - 1), \
+    games = [function3(s1 + 1, s2, move - 1 ),
+             function3(s1,  s2 + 1, move - 1),
+             function3(s1 * 2, s2, move - 1),
              function3(s1, s2 * 2, move - 1)]
 
     return any(games) if (move - 1) % 2 == 0 else all(games) # проверяем на ответы
