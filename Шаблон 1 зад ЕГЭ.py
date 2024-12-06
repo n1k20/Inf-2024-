@@ -2,7 +2,7 @@ from itertools import permutations
 
 t = '12 15 16 21 24 25 34 42 43 45 51 52 54 56 61 65'
 
-g= 'аб ба ав ва бв вб бг гб гд дг де ед вд дв вг гв'
+g = 'аб ба ав ва бв вб бг гб гд дг де ед вд дв вг гв'
 
 for i in permutations('абвгде'):
     graph = t
