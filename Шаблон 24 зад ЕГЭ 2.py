@@ -108,7 +108,7 @@ print(max_s)
 
 # другой вариант 24 зад
 # вариант Дамира
-s = open('24_9882.txt').readline().lower()  # открытый файл
+s = open('...').readline().lower()  # открытый файл
 answer_len = 10 ** 6  # максимальное число
 finish = []  # список для индексов
 prev_index = 0
@@ -133,6 +133,10 @@ with open('24_4643.txt') as file:
     final = final.replace('12B', 'X')
     final = final.replace('21A', 'X')
     final = final.replace('21B', 'X')
+    """
+    вообще лучше не использовать этот метод
+    он не такой надежный 
+    """
     the_end = []
     count = 0
     for i in final:  # ищем иксы
@@ -146,7 +150,6 @@ with open('24_4643.txt') as file:
 # другой сложный вариант 24
 
 s = open('24_10131.txt').readline()
-
 # словарь для префиксов
 p = {}
 c = max_s = 0
