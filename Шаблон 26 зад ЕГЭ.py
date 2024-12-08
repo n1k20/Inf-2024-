@@ -1,4 +1,7 @@
 """
+26 TASKS
+"""
+"""
 В магазине для упаковки подарков есть N кубических коробок. 
 Самой интересной считается упаковка подарка по принципу 
 матрешки – подарок упаковывается в одну из коробок, 
@@ -11,6 +14,7 @@
 маленькой коробки, где будет находиться подарок. 
 Размер подарка позволяет поместить его в самую 
 маленькую коробку."""
+
 with open('...') as file:
     n = int(file.readline())
     data = [int(k) for k in file]
@@ -37,7 +41,7 @@ for i in range(n):
 которые можно перевезти за один рейс
 """
 
-with open('26 (1).txt') as file:
+with open('...') as file:
     s, n = map(int, file.readline().split())
     data = sorted([int(k) for k in file])
 sum_s = 0
@@ -51,7 +55,7 @@ zapas = s - sum_s  # запас
 for i in range(n):  # снова перебор
     if data[i] - data[count - 1] <= zapas:
         # если разница между числом и номером с минус один \
-        # меньше, либо равно запасу то он
+        # меньше, либо равно запасу, то он
         the_end = data[i]  # и является концом
 print(the_end)
 
@@ -69,24 +73,24 @@ print(the_end)
 
 with open('...') as file:
     n, r = map(int, file.readline().split())
-    s = [int(k) for k in file]
-s.sort()
-sum_s = 0
+    numbers = [int(number) for number in file]
+numbers.sort()
+sum_numbers = 0
 min_time = 10 ** 11
 for i in range(n):
-    b = [s[0]]  # берем первый элемент капчи
-    s[0] = -1  # обозначаем индекс в списке
-    for j in range(1, len(s)):
-        if s[j] >= b[-1] + 60:
+    b = [numbers[0]]  # берем первый элемент капчи
+    numbers[0] = -1  # обозначаем индекс в списке
+    for j in range(1, len(numbers)):
+        if numbers[j] >= b[-1] + 60:
             # если время капчи больше капчи прошлой + 60 \
             # секунд на выполнение
-            b.append(s[j])  # добавляем файл
-            s[j] = -1
-    sum_s += len(b)  # длина выполнения капч
+            b.append(numbers[j])  # добавляем файл
+            numbers[j] = -1
+    sum_numbers += len(b)  # длина выполнения капч
     min_time = min(min_time, len(b))  # min \
     # разгадка капч
-    s = [k for k in s if k != -1]  # обновление файлов
-print(s, n)
+    numbers = [number for number in numbers if numbers != -1]  # обновление файлов
+print(numbers, n)
 
 with open('...') as file:
     k = 0
@@ -107,6 +111,8 @@ with open('...') as file:
         final.append(s[l])
     print(final)
     print(l, max(final))
+
+
 
 with open('...') as file:
     point, time = map(int, file.readline().split())  # находим данные для решения
