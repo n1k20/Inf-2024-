@@ -1,4 +1,4 @@
-with open('24.txt') as file:
+with open('...') as file:
     s = file.readline().lower()
 min_len = float('+inf')
 count = 0
@@ -62,9 +62,13 @@ for start in (0, 1, 2):  # разное начало
             count = 0  # обнуляем
         max_s = max(max_s, count)  # находим максимум
 print(max_s)
-"""Текстовый файл содержит строку из символов A, B, C, D, E, F.
+
+
+"""
+Текстовый файл содержит строку из символов A, B, C, D, E, F.
 Найдите максимальную длину подстроки, которая состоит из подряд идущих троек одинаковых символов.
-Например, в строке BBCDDDEEEFGGGEEEDDDDK такая подстрока GGGEEEDDD. Следовательно, ответ будет 9."""
+Например, в строке BBCDDDEEEFGGGEEEDDDDK такая подстрока GGGEEEDDD. Следовательно, ответ будет 9.
+"""
 
 with open('24_3900.txt') as file:
     s = file.readline().lower().split('a')[1:-1]
@@ -75,14 +79,20 @@ for w, x, y in zip(s, s[1:], s[2:]):  # гениально делаем zip
     if w == x == y:  # сравниваем
         max_len = max(max_len, len(w) * 3 + 4)  # находим максимум
 print(max_len)  # answer
-"""Текстовый файл состоит не более, чем из 106 символов 
+
+
+"""
+Текстовый файл состоит не более, чем из 106 символов 
 из набора A, B, C, D, E, F. Найдите максимальную длину строки 
 вида А*А*А*А, где между буквами А расположены одинаковые группы 
 символов, не содержащие букв А. Например, в строке 
-BDADBADBADBABDAFABDA такая подстрока ADBADBADBA (длина 10)."""
+BDADBADBADBABDAFABDA такая подстрока ADBADBADBA (длина 10).
+"""
 
 
-"""метод двух указателей"""
+"""
+метод двух указателей
+"""
 s = open('24_10105.txt').readline().lower()
 left = max_s = count = 0
 for right in range(len(s) - 1):
@@ -113,7 +123,9 @@ for index in range(len(s)):
             finish.pop(0)  # удаление начального индекса
 print(answer_len + 1)  # ответ + 1 для букв В и С
 
-"""метод с заменой переменной"""
+"""
+метод с заменой переменной
+"""
 with open('24_4643.txt') as file:
     final = ''
     for i in file: final += str(i)
